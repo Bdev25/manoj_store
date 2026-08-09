@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Manoj Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="top-bar">
+            <span><i class="fa-solid fa-truck"></i> Fast Home Delivery | 100% Genuine Medicines & Essentials</span>
+            <span><i class="fa-solid fa-phone"></i> Helpline: +91 98765 43210</span>
+        </div>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-heart-pulse"></i> Manoj <span>Store</span>
+            </a>
+            <div class="search-box">
+                <input type="text" placeholder="Search products...">
+                <button><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+            </div>
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-btn active">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart</span>
+                    <span class="badge" id="cartCount">2</span>
+                </a>
+            </div>
+        </div>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="categories.html"><i class="fa-solid fa-boxes-stacked"></i> All Categories</a></li>
+                <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+                <li><a href="contact.html"><i class="fa-solid fa-address-book"></i> Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-title-banner">
+        <h1>Your Shopping Cart</h1>
+        <p>Review items & proceed to checkout</p>
+    </div>
+
+    <section class="section">
+        <div class="cart-layout">
+            <div class="cart-items-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartTableBody">
+                        <tr>
+                            <td>
+                                <div class="cart-item-info">
+                                    <img src="https://images.unsplash.com/photo-1550572017-edf7b6070a24?w=100&auto=format&fit=crop&q=80" alt="Accu-Chek">
+                                    <span>Accu-Chek Active Glucose Monitor</span>
+                                </div>
+                            </td>
+                            <td>₹1,299</td>
+                            <td><input type="number" value="1" min="1" class="qty-input"></td>
+                            <td>₹1,299</td>
+                            <td><button class="remove-btn" onclick="removeItem(this)"><i class="fa-solid fa-trash"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="cart-item-info">
+                                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=100&auto=format&fit=crop&q=80" alt="Shelcal 500">
+                                    <span>Shelcal 500 Calcium Tablets</span>
+                                </div>
+                            </td>
+                            <td>₹112</td>
+                            <td><input type="number" value="1" min="1" class="qty-input"></td>
+                            <td>₹112</td>
+                            <td><button class="remove-btn" onclick="removeItem(this)"><i class="fa-solid fa-trash"></i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-line">
+                    <span>Subtotal:</span>
+                    <span>₹1,411</span>
+                </div>
+                <div class="summary-line">
+                    <span>Delivery Charge:</span>
+                    <span class="free-text">FREE</span>
+                </div>
+                <div class="summary-line">
+                    <span>Discount Savings:</span>
+                    <span class="discount-text">- ₹259</span>
+                </div>
+                <hr>
+                <div class="summary-line total-line">
+                    <span>Total Payable:</span>
+                    <span>₹1,411</span>
+                </div>
+                <button class="checkout-btn" onclick="checkoutAlert()">Proceed to Checkout <i class="fa-solid fa-credit-card"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3><i class="fa-solid fa-heart-pulse"></i> Manoj Store</h3>
+                <p>100% genuine healthcare products delivered fast.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Manoj Store. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

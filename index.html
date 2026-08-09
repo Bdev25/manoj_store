@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manoj Store - Online Pharmacy & Healthcare Essentials</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="top-bar">
+            <span><i class="fa-solid fa-truck"></i> Fast Home Delivery | 100% Genuine Medicines & Essentials</span>
+            <span><i class="fa-solid fa-phone"></i> Helpline: +91 98765 43210</span>
+        </div>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-heart-pulse"></i> Manoj <span>Store</span>
+            </a>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search medicines, OTC products, health devices, FMCG...">
+                <button><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+            </div>
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart</span>
+                    <span class="badge" id="cartCount">2</span>
+                </a>
+                <button class="prescription-btn" onclick="openModal('uploadModal')">
+                    <i class="fa-solid fa-file-medical"></i> Upload Doctor Note
+                </button>
+            </div>
+        </div>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="categories.html"><i class="fa-solid fa-boxes-stacked"></i> All Categories</a></li>
+                <li><a href="categories.html?cat=medicines"><i class="fa-solid fa-pills"></i> Medicines</a></li>
+                <li><a href="categories.html?cat=otc"><i class="fa-solid fa-sheet-plastic"></i> OTC & Wellness</a></li>
+                <li><a href="categories.html?cat=devices"><i class="fa-solid fa-laptop-medical"></i> Devices</a></li>
+                <li><a href="categories.html?cat=fmcg"><i class="fa-solid fa-basket-shopping"></i> Personal Care & FMCG</a></li>
+                <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+                <li><a href="contact.html"><i class="fa-solid fa-address-book"></i> Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sliding Hero Banner Carousel -->
+    <section class="slider-container">
+        <div class="slider">
+            <!-- Slide 1 -->
+            <div class="slide active" style="background: linear-gradient(135deg, #0284c7, #0f766e);">
+                <div class="slide-content">
+                    <span class="tag"><i class="fa-solid fa-bolt"></i> Special Discount</span>
+                    <h1>Flat 20% OFF on Genuine Medicines</h1>
+                    <p>Order prescription & over-the-counter medicines at unbeatable prices with guaranteed purity.</p>
+                    <a href="categories.html?cat=medicines" class="btn-primary">Shop Medicines Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="slide-img">
+                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&auto=format&fit=crop&q=80" alt="Medicines">
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide" style="background: linear-gradient(135deg, #15803d, #047857);">
+                <div class="slide-content">
+                    <span class="tag"><i class="fa-solid fa-shield-halved"></i> Health Essentials</span>
+                    <h1>Top Quality Healthcare Devices</h1>
+                    <p>BP Monitors, Glucometers, Thermometers & Nebulizers for your family's safety.</p>
+                    <a href="categories.html?cat=devices" class="btn-primary">Explore Devices <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="slide-img">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&auto=format&fit=crop&q=80" alt="Healthcare Devices">
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide" style="background: linear-gradient(135deg, #4338ca, #6d28d9);">
+                <div class="slide-content">
+                    <span class="tag"><i class="fa-solid fa-user-doctor"></i> Personal Guidance</span>
+                    <h1>Meet Your HealthBuddy Assistance</h1>
+                    <p>Get personalized guidance, medicine delivery, and order support at your doorstep.</p>
+                    <a href="about.html#healthbuddy" class="btn-primary">Learn About HealthBuddy <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="slide-img">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&auto=format&fit=crop&q=80" alt="Doctor Assistance">
+                </div>
+            </div>
+        </div>
+
+        <button class="prev-btn" onclick="prevSlide()"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="next-btn" onclick="nextSlide()"><i class="fa-solid fa-chevron-right"></i></button>
+
+        <div class="dots-container">
+            <span class="dot active" onclick="setSlide(0)"></span>
+            <span class="dot" onclick="setSlide(1)"></span>
+            <span class="dot" onclick="setSlide(2)"></span>
+        </div>
+    </section>
+
+    <!-- Quick Features Highlight -->
+    <section class="features">
+        <div class="feature-card">
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+                <h3>100% Genuine</h3>
+                <p>Authentic products sourced directly</p>
+            </div>
+        </div>
+        <div class="feature-card">
+            <i class="fa-solid fa-tags"></i>
+            <div>
+                <h3>Affordable Pricing</h3>
+                <p>Heavy discounts on all essentials</p>
+            </div>
+        </div>
+        <div class="feature-card">
+            <i class="fa-solid fa-truck-fast"></i>
+            <div>
+                <h3>Express Delivery</h3>
+                <p>Fast delivery right to your door</p>
+            </div>
+        </div>
+        <div class="feature-card">
+            <i class="fa-solid fa-user-nurse"></i>
+            <div>
+                <h3>HealthBuddy Support</h3>
+                <p>Personalized healthcare guidance</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop By Category -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Shop by Category</h2>
+            <a href="categories.html" class="view-all">View All Categories <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="grid-4">
+            <a href="categories.html?cat=medicines" class="cat-card">
+                <img src="https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=400&auto=format&fit=crop&q=80" alt="Prescription Medicines">
+                <h3>Prescription Medicines</h3>
+                <p>Up to 20% OFF</p>
+            </a>
+            <a href="categories.html?cat=otc" class="cat-card">
+                <img src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=400&auto=format&fit=crop&q=80" alt="OTC & Wellness">
+                <h3>OTC & Wellness</h3>
+                <p>Vitamins, Supplements & Daily Care</p>
+            </a>
+            <a href="categories.html?cat=devices" class="cat-card">
+                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&auto=format&fit=crop&q=80" alt="Healthcare Devices">
+                <h3>Healthcare Devices</h3>
+                <p>BP Monitors, Thermometers & Nebulizers</p>
+            </a>
+            <a href="categories.html?cat=fmcg" class="cat-card">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&auto=format&fit=crop&q=80" alt="Personal & FMCG">
+                <h3>Personal Care & FMCG</h3>
+                <p>Skin, Baby Care & Hygeine</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="section bg-light">
+        <div class="section-header">
+            <h2>Top Selling Healthcare Essentials</h2>
+            <a href="categories.html" class="view-all">See All Products <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="grid-4">
+
+            <div class="product-card">
+                <span class="discount-badge">15% OFF</span>
+                <img src="https://images.unsplash.com/photo-1550572017-edf7b6070a24?w=400&auto=format&fit=crop&q=80" alt="Accu-Chek Active Kit">
+                <h3>Accu-Chek Active Glucose Monitor</h3>
+                <p class="brand">Brand: Accu-Chek</p>
+                <div class="price-box">
+                    <span class="price">₹1,299</span>
+                    <span class="old-price">₹1,530</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Accu-Chek Active', 1299)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <span class="discount-badge">20% OFF</span>
+                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&auto=format&fit=crop&q=80" alt="Shelcal 500 Tablets">
+                <h3>Shelcal 500 Calcium Tablets</h3>
+                <p class="brand">Brand: Torrent Pharma</p>
+                <div class="price-box">
+                    <span class="price">₹112</span>
+                    <span class="old-price">₹140</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Shelcal 500 Tablets', 112)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <span class="discount-badge">18% OFF</span>
+                <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=400&auto=format&fit=crop&q=80" alt="Dettol Antiseptic Liquid">
+                <h3>Dettol Antiseptic Liquid 500ml</h3>
+                <p class="brand">Brand: Reckitt</p>
+                <div class="price-box">
+                    <span class="price">₹195</span>
+                    <span class="old-price">₹238</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Dettol Antiseptic Liquid', 195)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <span class="discount-badge">25% OFF</span>
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&auto=format&fit=crop&q=80" alt="Digital BP Monitor">
+                <h3>Automatic BP Monitor</h3>
+                <p class="brand">Brand: Omron / Pristyn</p>
+                <div class="price-box">
+                    <span class="price">₹1,850</span>
+                    <span class="old-price">₹2,467</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Automatic BP Monitor', 1850)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- HealthBuddy Banner -->
+    <section class="healthbuddy-banner">
+        <div class="hb-content">
+            <h2><i class="fa-solid fa-user-doctor"></i> Manoj Store HealthBuddy Initiative</h2>
+            <p>Our dedicated HealthBuddies bring pharmacy services closer to you! From guiding you on doctor notes to personal door-step delivery and assistance, we ensure care for every family.</p>
+            <div class="hb-features">
+                <span><i class="fa-solid fa-circle-check"></i> Doorstep Order Delivery</span>
+                <span><i class="fa-solid fa-circle-check"></i> Medicine Consultation</span>
+                <span><i class="fa-solid fa-circle-check"></i> Reliable Customer Support</span>
+            </div>
+            <a href="contact.html" class="btn-secondary">Request HealthBuddy Call</a>
+        </div>
+    </section>
+
+    <!-- Doctor Note Upload Modal -->
+    <div id="uploadModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('uploadModal')">&times;</span>
+            <h2><i class="fa-solid fa-file-medical"></i> Upload Doctor Prescription</h2>
+            <p>Upload a clear photo or doctor's note, and our certified pharmacist will prepare your order!</p>
+            <form onsubmit="handlePrescriptionSubmit(event)">
+                <div class="form-group">
+                    <label>Your Full Name</label>
+                    <input type="text" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" required placeholder="Enter mobile number">
+                </div>
+                <div class="form-group">
+                    <label>Select Doctor Note File</label>
+                    <input type="file" required accept="image/*,.pdf">
+                </div>
+                <button type="submit" class="btn-submit">Submit Prescription</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3><i class="fa-solid fa-heart-pulse"></i> Manoj Store</h3>
+                <p>Manoj Store is your trusted online pharmacy & healthcare partner, committed to providing 100% genuine medicines, healthcare devices, and FMCG essentials at discounted rates.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="categories.html">All Categories</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="cart.html">View Cart</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Top Categories</h4>
+                <ul>
+                    <li><a href="categories.html?cat=medicines">Prescription Medicines</a></li>
+                    <li><a href="categories.html?cat=otc">OTC Health & Wellness</a></li>
+                    <li><a href="categories.html?cat=devices">Medical Devices</a></li>
+                    <li><a href="categories.html?cat=fmcg">Personal Care & FMCG</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Main Market, Town Road, Guwahati, Assam</p>
+                <p><i class="fa-solid fa-envelope"></i> info@manojstore.com</p>
+                <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Manoj Store. Inspired by SastaSundar Healthcare. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

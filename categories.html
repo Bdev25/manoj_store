@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Categories - Manoj Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="top-bar">
+            <span><i class="fa-solid fa-truck"></i> Fast Home Delivery | 100% Genuine Medicines & Essentials</span>
+            <span><i class="fa-solid fa-phone"></i> Helpline: +91 98765 43210</span>
+        </div>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-heart-pulse"></i> Manoj <span>Store</span>
+            </a>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search products...">
+                <button><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+            </div>
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart</span>
+                    <span class="badge" id="cartCount">2</span>
+                </a>
+            </div>
+        </div>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="categories.html" class="active"><i class="fa-solid fa-boxes-stacked"></i> All Categories</a></li>
+                <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+                <li><a href="contact.html"><i class="fa-solid fa-address-book"></i> Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-title-banner">
+        <h1>Explore Product Categories</h1>
+        <p>Buy 100% Genuine Medicines, OTC Essentials & Healthcare Devices</p>
+    </div>
+
+    <section class="section">
+        <div class="category-tabs">
+            <button class="tab-btn active" onclick="filterCat('all')">All Products</button>
+            <button class="tab-btn" onclick="filterCat('medicines')">Prescription Medicines</button>
+            <button class="tab-btn" onclick="filterCat('otc')">OTC & Wellness</button>
+            <button class="tab-btn" onclick="filterCat('devices')">Healthcare Devices</button>
+            <button class="tab-btn" onclick="filterCat('fmcg')">FMCG & Hygiene</button>
+        </div>
+
+        <div class="grid-4" id="productGrid">
+
+            <!-- Medicines -->
+            <div class="product-card item-medicines">
+                <span class="discount-badge">15% OFF</span>
+                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&auto=format&fit=crop&q=80" alt="Pan 40 Tablet">
+                <h3>Pan 40 Tablet (15 Tabs)</h3>
+                <p class="brand">Category: Prescription Medicine</p>
+                <div class="price-box">
+                    <span class="price">₹130</span>
+                    <span class="old-price">₹153</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Pan 40 Tablet', 130)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+
+            <div class="product-card item-medicines">
+                <span class="discount-badge">18% OFF</span>
+                <img src="https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=400&auto=format&fit=crop&q=80" alt="Telma 40 Tablet">
+                <h3>Telma 40 Tablet</h3>
+                <p class="brand">Category: Prescription Medicine</p>
+                <div class="price-box">
+                    <span class="price">₹182</span>
+                    <span class="old-price">₹222</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Telma 40 Tablet', 182)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+
+            <!-- OTC -->
+            <div class="product-card item-otc">
+                <span class="discount-badge">20% OFF</span>
+                <img src="https://images.unsplash.com/photo-1550572017-edf7b6070a24?w=400&auto=format&fit=crop&q=80" alt="Shelcal 500">
+                <h3>Shelcal 500 Calcium Tablets</h3>
+                <p class="brand">Category: OTC & Wellness</p>
+                <div class="price-box">
+                    <span class="price">₹112</span>
+                    <span class="old-price">₹140</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Shelcal 500', 112)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+
+            <div class="product-card item-otc">
+                <span class="discount-badge">10% OFF</span>
+                <img src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=400&auto=format&fit=crop&q=80" alt="Zincovit Tablets">
+                <h3>Zincovit Multivitamin Tablets</h3>
+                <p class="brand">Category: OTC & Wellness</p>
+                <div class="price-box">
+                    <span class="price">₹99</span>
+                    <span class="old-price">₹110</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Zincovit Tablets', 99)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+
+            <!-- Devices -->
+            <div class="product-card item-devices">
+                <span class="discount-badge">25% OFF</span>
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&auto=format&fit=crop&q=80" alt="Digital BP Monitor">
+                <h3>AccuSure Automatic BP Monitor</h3>
+                <p class="brand">Category: Healthcare Devices</p>
+                <div class="price-box">
+                    <span class="price">₹1,650</span>
+                    <span class="old-price">₹2,200</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Automatic BP Monitor', 1650)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+
+            <div class="product-card item-devices">
+                <span class="discount-badge">15% OFF</span>
+                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&auto=format&fit=crop&q=80" alt="Digital Thermometer">
+                <h3>AccuSure Digital Thermometer</h3>
+                <p class="brand">Category: Healthcare Devices</p>
+                <div class="price-box">
+                    <span class="price">₹210</span>
+                    <span class="old-price">₹250</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Digital Thermometer', 210)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+
+            <!-- FMCG -->
+            <div class="product-card item-fmcg">
+                <span class="discount-badge">18% OFF</span>
+                <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=400&auto=format&fit=crop&q=80" alt="Dettol Liquid">
+                <h3>Dettol Antiseptic Liquid 500ml</h3>
+                <p class="brand">Category: FMCG & Hygiene</p>
+                <div class="price-box">
+                    <span class="price">₹195</span>
+                    <span class="old-price">₹238</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Dettol Antiseptic', 195)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+
+            <div class="product-card item-fmcg">
+                <span class="discount-badge">12% OFF</span>
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&auto=format&fit=crop&q=80" alt="Sensodyne Toothpaste">
+                <h3>Sensodyne Fresh Gel Toothpaste</h3>
+                <p class="brand">Category: FMCG & Hygiene</p>
+                <div class="price-box">
+                    <span class="price">₹160</span>
+                    <span class="old-price">₹182</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Sensodyne Gel', 160)"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3><i class="fa-solid fa-heart-pulse"></i> Manoj Store</h3>
+                <p>Providing top-quality healthcare and pharmacy solutions.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Manoj Store. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
